@@ -8,11 +8,33 @@
 }
 
 body {
+    position: relative;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, #a5b4fc, #93c5fd);
+    background-color: #f6f8fc;    
+}
+
+.title { 
+    position: fixed;
+    top: 0;
+    width: 40%;
+    height: 70px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: ;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
 }
 
 .kanban {
@@ -22,15 +44,17 @@ body {
     width: 100%;
     height: 90vh;
     overflow-x: auto;
+    
 }
 
 .kanban-column {
     display: flex;
     flex-direction: column;
     gap: 18px;
+    
     height: 100%;
     overflow-y: auto;
-    background-color: #f6f8fc;
+    background-color: #f6f8fc90;
     border-radius: 12px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     padding: 12px;
@@ -46,6 +70,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
+    
 }
 
 .kanban-column[data-id="1"]::after {
@@ -75,7 +100,7 @@ body {
 
 .kanban-title h2 {
     font-size: 18px;
-    color: #4b5563;
+    color: #191d22;
     font-weight: 600;
 }
 
@@ -93,14 +118,15 @@ body {
     gap: 8px;
     height: 100%;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: ;
+    
 }
 
 .kanban-card {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    background-color: #ffffff;
+    background-color: #f4dddd;
     border-radius: 14px;
     padding: 10px;
     box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
@@ -131,6 +157,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 25px;
 }
 
 .card-icons {
@@ -154,7 +181,7 @@ body {
 }
 
 .cards-hover {
-    background-color: #eaeffa;
+    background-color: #395694;
     border-radius: 8px;
 }
 
@@ -163,11 +190,11 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-    background-color: #eaeffa;
+    background-color: #8a9abf;
     border-radius: 8px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #b7d3fb;
+    background-color: #b9f4c6;
     border-radius: 20px;
 }
