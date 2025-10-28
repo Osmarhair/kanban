@@ -1,28 +1,33 @@
-document.querySelectorAll('.kanban-card').forEach(card => {
-    card.addEventListener('dragstart', e => {
-        e.currentTarget.classList.add('dragging');
-    })
+const Login = () => {
 
-    card.addEventListener('dragend', e => {
-        e.currentTarget.classList.remove('dragging');
-    })
-})
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
-document.querySelectorAll('.kanban-cards').forEach(column => {
-    column.addEventListener('dragover', e => {
-        e.preventDefault();
-        e.currentTarget.classList.add('cards-hover');
-    })
+    const handleSubmit = (event) => {
+        event.preventDefault();
 
-    column.addEventListener('dragleave', e => {
-        e.currentTarget.classList.remove('cards-hover');
-    })
+        console.log("teste", username, password);
 
-    column.addEventListener('drop', e => {
-        e.currentTarget.classList.remove('cards-hover');
-    
+        console.log("Envio");
+    }
+};
 
-        const dragCard = document.querySelector('.kanban-card.dragging');
-        e.currentTarget.appendChild(dragCard);
-    })
-})
+function login(event) {
+    event.preventDefault();
+
+    const userInput = document.getElementById('user').value;
+    const passwordInput = document.getElementById('password').value;
+    const msgError = document.getElementById('mensagemErro');
+
+    msgError.textContent = '';
+
+    if (userInput === USUARIO_CORRETO && passwordInput === SENHA_CORRETA) {
+        alert('Bem vindo');
+        window.location.href = 'src/quadro.html';
+    } else {
+        msgError.textContent = 'Usuario ou senha incorretos.';
+    }
+}
+
+const form = document.getElementById('loginForm');
+form.addEventListener('submit', login);

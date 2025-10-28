@@ -3,13 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/index.css">
     <title>Document</title>
     
 </head>
 <body>
     <img src="src/images/conect.jpg" alt="conect">
-    <h1>acesso quadro</h1>
+    <div class="container">
+        <form onsubmit={handleSubmit}>
+            <h1>Acesso</h1>
+            <div class="input-field">
+                <input type="email"
+                placeholder="E-mail"
+                required;
+            </div>
+
+            <div className="input-field">
+                <input type="password"
+                placeholder='Senha'
+                <FaLock className="icon" />
+            </div>
+
+            <div className="recall-forget">
+                <label>
+                    <input type="checkbox" />
+                    Lembrar de mim
+                </label>
+                <a href="a">Esqueceu a senha?</a>                
+            </div>
+
+            <button>Entrar</button>
+
+            <div className="signup-link">
+                <p>
+                    Não tem acesso? <a href="a">Registrar</a>
+                </p>
+            </div>
+        </form>
+    </div>
 
 
 
