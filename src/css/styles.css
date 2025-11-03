@@ -198,3 +198,64 @@ img {
     background-color: #b9f4c6;
     border-radius: 20px;
 }
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #22282f06;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px 20px;
+}
+
+.main-header h1 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+
+
+/*ESTILO DA NAVBAR*/
+
+.navbar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #3f4e5f52;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   z-index: 1000;
+   padding: 15px 0;
+}
+
+.menus {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.manu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #f6f8fc;
+}
