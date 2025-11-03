@@ -4,44 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/index.css">
+    <link href='https://cdn.boxicons.com/3.0.3/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
     
 </head>
 <body>
-    <img src="src/images/conect.jpg" alt="conect">
-    <div class="container">
-        <form onsubmit={handleSubmit}>
-            <h1>Acesso</h1>
-            <div class="input-field">
-                <input type="email"
-                placeholder="E-mail"
-                required;
-            </div>
+    
+    <main>
+        <div class="wrapper">
+            <form action="">
+                <h1>ACESSO</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Usuário" required>
+                    <i class='bxr  bx-user'></i>   
+                </div>
 
-            <div className="input-field">
-                <input type="password"
-                placeholder='Senha'
-                <FaLock className="icon" />
-            </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Senha" required>
+                    <i class='bxr  bx-lock'></i> 
+                </div>
 
-            <div className="recall-forget">
-                <label>
-                    <input type="checkbox" />
-                    Lembrar de mim
-                </label>
-                <a href="a">Esqueceu a senha?</a>                
-            </div>
+                <div class="remember-forgot">
+                    <label> Lembrar de mim
+                        <input type="checkbox">
+                        <a href="#">Esqueceu a senha?</a>
+                    </label>
+                </div>
 
-            <button>Entrar</button>
+                <button type="submit" class="btn">Login</button>
 
-            <div className="signup-link">
-                <p>
-                    Não tem acesso? <a href="a">Registrar</a>
-                </p>
-            </div>
-        </form>
-    </div>
+                <div class="register-link">
+                    <p>Não tem acesso? <a href="#">Clique aqui</a></p>
+                </div>
+            </form>
+        </div>
 
+    </main>
 
 
 
