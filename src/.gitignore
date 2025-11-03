@@ -1,0 +1,11 @@
+# Dependências
+node_modules/
+
+# Configs
+.env
+
+# Banco de dados
+*.db
+
+# Logs
+npm-debug.log

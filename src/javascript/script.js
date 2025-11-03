@@ -1,33 +1,31 @@
-const Login = () => {
+async function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+  const res = await fetch("http://localhost:3000/auth/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password })
+  });
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+  const data = await res.json();
+  alert(data.message);
 
-        console.log("teste", username, password);
-
-        console.log("Envio");
-    }
-};
-
-function login(event) {
-    event.preventDefault();
-
-    const userInput = document.getElementById('user').value;
-    const passwordInput = document.getElementById('password').value;
-    const msgError = document.getElementById('mensagemErro');
-
-    msgError.textContent = '';
-
-    if (userInput === USUARIO_CORRETO && passwordInput === SENHA_CORRETA) {
-        alert('Bem vindo');
-        window.location.href = 'src/quadro.html';
-    } else {
-        msgError.textContent = 'Usuario ou senha incorretos.';
-    }
+  if (data.token) {
+    localStorage.setItem("token", data.token);
+  }
 }
 
-const form = document.getElementById('loginForm');
-form.addEventListener('submit', login);
+async function register() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const res = await fetch("http://localhost:3000/auth/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password })
+  });
+
+  const data = await res.json();
+  alert(data.message);
+}
