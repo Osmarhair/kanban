@@ -207,7 +207,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #22282f06;
+    background-color: #2c3e5000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 15px 20px;
@@ -219,8 +219,6 @@ img {
     color: #fff;
     font-size: 1.5em;
 }
-
-
 
 /*ESTILO DA NAVBAR*/
 
@@ -240,7 +238,7 @@ img {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -248,11 +246,11 @@ img {
 }
 
 .manu a {
-    color: #fff;
+    color: #f9f7f7;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 500;
-    margin-left: 30px;
+    margin-left: 60px;
     transition: color 0.3s ease;
 }
 
